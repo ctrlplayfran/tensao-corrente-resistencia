@@ -1,0 +1,9 @@
+#calcular o resistor ideal
+miliampere = float(input("Entre com o valor da corrente elétrica em miliamperes: "))
+tensao_bateria = float(input("Digite o valor da tensão da bateria (V)"))
+tensao_led_aguenta = float(input("Entre com om valor da tensão que o led suporta:"))
+ampere = miliampere/1000
+resistencia = tensao_bateria - tensao_led_aguenta / ampere
+resistencia = abs(resistencia)
+if resistencia >= 40 and resistencia <=240:
+    print("Resistencia pode ser usada")
