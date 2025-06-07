@@ -1,0 +1,38 @@
+# Programa para calcular tensão, resistência e corrente elétrica
+
+while True:
+    print("Escolha uma opção para calcular:")
+    print("1 - Calcular tensão (V = I * R)")
+    print("2 - Calcular resistência (R = V / I)")
+    print("3 - Calcular corrente (I = V / R)")
+    print("4 - Sair")
+    
+    escolha = input("Digite o número da opção: ")
+
+    if escolha == '1':
+        # Calcular a tensão
+        corrente = float(input("Digite o valor da corrente (I) em amperes: "))
+        resistencia = float(input("Digite o valor da resistência (R) em ohms: "))
+        tensao = corrente * resistencia
+        print("Tensão (V)", tensao, "volts")
+
+    elif escolha == '2':
+        # Calcular a resistência
+        tensao = float(input("Digite o valor da tensão (V) em volts: "))
+        corrente = float(input("Digite o valor da corrente (I) em amperes: "))
+        resistencia = tensao / corrente
+        print("Resistência (R)" , resistencia, " ohms")
+
+    elif escolha == '3':
+        # Calcular a corrente
+        tensao = float(input("Digite o valor da tensão (V) em volts: "))
+        resistencia = float(input("Digite o valor da resistência (R) em ohms: "))
+        corrente = tensao / resistencia
+        print("Corrente (I) " ,corrente, "amperes")
+
+    elif escolha == '4':
+        print("Saindo do programa.")
+        break  # Encerra o laço while
+
+    else:
+        print("Opção inválida! Tente novamente.")
